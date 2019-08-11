@@ -10,3 +10,9 @@ cargo build
 ## Run
 ```
 cargo run
+```
+
+## Release
+```
+cargo build --release
+```
