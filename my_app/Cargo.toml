@@ -1,5 +1,5 @@
 [package]
-name = "hello_world"
+name = "my_app"
 version = "0.1.0"
 authors = ["anthony-bt <aa.barillot@gmail.com>"]
 edition = "2018"
@@ -20,3 +20,6 @@ gdk-pixbuf = "^0"
 gtk = "^0"
 pango = "^0"
 cairo-rs = { version = "^0", features = ["png"] }
+
+[dev-dependencies]
+cargo-watch = "^7.3.0"

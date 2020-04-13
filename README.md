@@ -3,13 +3,18 @@ Try to test the new language Rust
 
 ## Build
 ```
-cd hello_world/
+cd my_app/
 cargo build
 ```
 
 ## Run
 ```
 cargo run
+```
+
+## Run with live reload
+```
+cargo watch -x 'run -- -release'
 ```
 
 ## Release
