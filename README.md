@@ -16,3 +16,6 @@ cargo run
 ```
 cargo build --release
 ```
+
+# Reading
+- Gtk-rs: Tutorial - https://gtk-rs.org/docs-src/tutorial/
