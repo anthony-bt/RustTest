@@ -28,7 +28,7 @@ jobs:
       id: badge
       with:
         debug: true
-        directory: ./
+        directory: ./src
         badge: ./output/badge.svg
         patterns: '*.rs'
         
