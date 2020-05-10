@@ -1,3 +1,5 @@
+![Rust](https://github.com/anthony-bt/RustTest/workflows/Rust/badge.svg)
+
 # RustTest
 Try to test the new language Rust
 
