@@ -3,7 +3,6 @@ use std::fmt;
 /*
  * Enum to define download statuses
  */
-#[allow(dead_code)]
 #[derive(PartialEq)]
 pub enum Status {
 	ToDownload, // download added to the download list
@@ -31,4 +30,10 @@ impl fmt::Display for Status {
 			Status::Cancelled => write!(f, "CANCELLED"),
 		 }
 	}
+}
+
+#[test]
+fn this_test_status_enum() {
+	assert_eq!(Status::ToDownload, Status::ToDownload);
+	assert_ne!(Status::ToDownload, Status::InProgress);
 }

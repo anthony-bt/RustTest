@@ -19,6 +19,11 @@ cargo run
 cargo watch -x 'run -- -release'
 ```
 
+## Test
+```
+cargo test
+```
+
 ## Release
 ```
 cargo build --release
