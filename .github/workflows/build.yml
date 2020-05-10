@@ -25,7 +25,7 @@ jobs:
       - name: Upload to codecov.io
         uses: codecov/codecov-action@v1.0.2
         with:
-          token: ${{secrets.CODECOV_TOKEN}}
+          token: '2273bd1b-2786-4720-8a7c-2be70fcad505'
 
       - name: Archive code coverage results
         uses: actions/upload-artifact@v1
