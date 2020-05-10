@@ -17,9 +17,12 @@ glib = "^0"
 gio = "^0"
 gdk = "^0"
 gdk-pixbuf = "^0"
-gtk = "^0"
 pango = "^0"
 cairo-rs = { version = "^0", features = ["png"] }
+
+[dependencies.gtk]
+version = "0.8.1"
+features = ["v3_20"]
 
 [dev-dependencies]
 cargo-watch = "^7.3.0"

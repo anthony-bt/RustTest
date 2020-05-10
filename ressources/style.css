@@ -1,0 +1,35 @@
+/*** Grid ***/
+
+.header {
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+.header label {
+    border: 1px solid black;
+    border-right: none;
+    border-bottom: none;
+}
+
+.header label:last-child {
+    border-right: 1px solid black;
+}
+
+grid {
+    margin: 10px;
+    margin-top: 0px;
+    border: 1px solid black;
+    border-right: none;
+    border-bottom: none;
+}
+
+grid label {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+/* grid progressbar {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+} */
