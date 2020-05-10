@@ -22,6 +22,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
-    - name: Lines of Code Badge
+    # Line of code badge
+    - name: Make Code Badge
       uses: shadowmoose/GHA-LoC-Badge@1.0.0
+      id: badge
+      with:
+        debug: true
+        directory: ./
+        badge: ./output/badge.svg
+        patterns: '*.rs'
