@@ -1,9 +1,9 @@
 extern crate gtk;
 extern crate gio;
-
-mod grid; 
 use gtk::prelude::*;
 use std::process::Command;
+
+pub mod grid;
 
 const CSS: &str = include_str!("../ressources/style.css");
 const GLADE: &str = include_str!("../ressources/interface.glade");
@@ -31,8 +31,8 @@ fn run_command_line(url: String) {
 
 fn main() {
     // Test GRID
-    let mut f1 = grid::File::new("file1", "mp3");
-    let mut f2 = grid::File::new("file2", "mp3");
+    let mut f1 = grid::file::File::new("file1", "mp3");
+    let mut f2 = grid::file::File::new("file2", "mp3");
     f1.display();
     f2.display();
     f1.set_progress(10.0);
