@@ -42,9 +42,9 @@ impl File<'_> {
 	/*
 	 * Get format
 	 */
-	 pub fn get_fomat(&mut self) -> &str {
-		 self.format
-	 }
+	pub fn get_fomat(&mut self) -> &str {
+		self.format
+	}
 
 	/*
 	 * Set progress
