@@ -1,5 +1,6 @@
-extern crate gtk;
 extern crate gio;
+extern crate gtk;
+
 use gtk::prelude::*;
 use std::process::Command;
 
@@ -43,17 +44,15 @@ fn main() {
     println!("URL: {}", &mut f1.get_url());
     println!("URL: {}", &mut f2.get_url());
     // End Test GRID
-
+    
+    /*** configure interface ***/
+    
     // initialize
     if gtk::init().is_err() {
         println!("Failed to initialize GTK.");
         return;
     }
 
-    // build window
-    let builder = gtk::Builder::new_from_string(GLADE);
-    let window: gtk::Window = builder.get_object("window1").unwrap();
-    
     // define CSS provider
     let provider = gtk::CssProvider::new();
     provider.load_from_data(CSS.as_bytes())
@@ -66,11 +65,29 @@ fn main() {
         gtk::STYLE_PROVIDER_PRIORITY_USER
     );
     
-    // controls
+    /*** controls ***/
+    
+    // build window
+    let builder = gtk::Builder::new_from_string(GLADE);
+    let window: gtk::Window = builder.get_object("window1").unwrap();
+    let quit: gtk::MenuItem = builder.get_object("imagemenuitem1").unwrap();
+
+    // window quit
+    window.connect_delete_event(|_, _| {
+        gtk::main_quit();
+        Inhibit(false)
+    });
+
+    // menu quit
+    quit.connect_activate(move |_| {
+        gtk::main_quit();
+    });
+
+    // others to develop
+
     // let label: gtk::Label = builder.get_object("tabletitlelabel1").unwrap();
     // let download: gtk::Button = builder.get_object("button1").unwrap();
     // let entry: gtk::Entry = builder.get_object("entry1").unwrap();
-
     // download.connect_clicked(move |_| {
     //     println!("Clicked Download");
     //     let url = entry.get_text().unwrap().to_string();
